@@ -32,7 +32,37 @@
         <!-- navbar .. to repeat in all files -->
         <div class="container-90">
 
+            <div class="form-box rounded-sm">
+                <h:form id="form">
+                    <h:outputLabel value="Brand" for="brand">
+                        <h:inputText styleClass="input mb-20" id="brand" value="#{sessionBean.username}" />
+                    </h:outputLabel>
 
+                    <h:outputLabel value="Model" for="model">
+                        <h:inputText styleClass="input mb-20" id="model" value="#{sessionBean.password}" />
+                    </h:outputLabel>
+
+                    <h:outputLabel value="Price" for="price">
+                        <h:inputText styleClass="input mb-20" id="price" value="#{sessionBean.password}" />
+                    </h:outputLabel>
+
+                    <h:outputLabel value="Engine Size" for="engine">
+                        <h:inputText styleClass="input mb-20" id="engine" value="#{sessionBean.password}" />
+                    </h:outputLabel>
+
+                    <h:outputLabel value="Seats" for="seats">
+                        <h:inputText styleClass="input mb-20" id="seats" value="#{sessionBean.password}" />
+                    </h:outputLabel>
+
+                    <h:outputLabel value="Photo" for="photo">
+                        <h:inputText styleClass="input mb-20" id="photo" value="#{sessionBean.password}" />
+                    </h:outputLabel>
+
+                    <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Add Car" action="#{sessionBean.doLogin()}" />
+
+                    <h:messages styleClass="list-none error-box" id="errorMessage" />
+                </h:form>
+            </div>
 
         </div>
         <!-- footer .. to repeat in all files -->

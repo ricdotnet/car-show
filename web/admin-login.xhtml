@@ -10,6 +10,8 @@
     </h:head>
     <h:body>
 
+        #{sessionBean.preventDoubleLogin()} <!-- if the admin is logged they will not be able to see this page -->
+
         <!-- navbar .. to repeat in all files -->
         <div id="nav">
             <div class="container">
@@ -35,16 +37,16 @@
             <div class="form-box rounded-sm">
                 <h:form id="form">
                     <h:outputLabel value="Username" for="username">
-                        <h:inputText styleClass="input" id="username" value="#{sessionBean.username}" />
+                        <h:inputText styleClass="input mb-20" id="username" value="#{sessionBean.username}" />
                     </h:outputLabel>
 
                     <h:outputLabel value="Password" for="password">
-                        <h:inputText styleClass="input" id="password" value="#{sessionBean.password}" />
+                        <h:inputText styleClass="input mb-20" id="password" value="#{sessionBean.password}" />
                     </h:outputLabel>
 
-                    <h:commandButton value="Login" action="#{sessionBean.doLogin()}" />
+                    <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Login" action="#{sessionBean.doLogin()}" />
 
-                    <h:messages id="errorMessage" />
+                    <h:messages styleClass="list-none error-box" id="errorMessage" />
                 </h:form>
             </div>
 

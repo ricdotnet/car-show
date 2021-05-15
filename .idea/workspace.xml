@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="853ce37a-2de1-4057-9074-022ab2e10645" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Session/SessionStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Session/SessionStore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/web/admin-login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin-login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/resources/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Session/SessionStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Session/SessionStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin-login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin-login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621022417889</updated>
-      <workItem from="1621022420155" duration="17886000" />
+      <workItem from="1621022420155" duration="20699000" />
     </task>
     <servers />
   </component>

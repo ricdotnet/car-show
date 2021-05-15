@@ -58,7 +58,7 @@ Footer styles
 }
 
 /*
-Form box and inputs
+Form box, inputs and toasts
  */
 .form-box {
     width: 300px;
@@ -71,6 +71,19 @@ Form box and inputs
     width: 100%;
     padding: 5px 10px;
     box-sizing: border-box;
+}
+.toast {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    max-width: 200px;
+    padding: 15px;
+}
+.error-box {
+    background-color: rgba(215, 60, 44, 0.5);
+    border: 1px solid #D73C2C;
+    color: white;
+    padding: 10px;
 }
 
 /*
@@ -108,6 +121,15 @@ Buttons
     background-color: red;
     padding: 10px 15px;
 }
+.btn-primary {
+    color: white;
+    padding: 10px 15px;
+    background-color: #2C3E50;
+    outline: none;
+    }
+    .btn-primary:hover {
+        background-color: #192530;
+    }
 
 /*
 Text styling
@@ -121,6 +143,40 @@ Text styling
 .text-center { text-align: center; }
 
 /*
+Margins and paddings
+ */
+.m-5 { margin: 5px; }
+.m-10 { margin: 10px; }
+.m-15 { margin: 15px; }
+.m-20 { margin: 20px; }
+.m-30 { margin: 30px; }
+.m-50 { margin: 50px; }
+.mt-5 { margin-top: 5px; }
+.mt-10 { margin-top: 10px; }
+.mt-15 { margin-top: 15px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mt-50 { margin-top: 50px; }
+.mb-5 { margin-bottom: 5px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-50 { margin-bottom: 50px; }
+.ml-5 { margin-left: 5px; }
+.ml-10 { margin-left: 10px; }
+.ml-15 { margin-left: 15px; }
+.ml-20 { margin-left: 20px; }
+.ml-30 { margin-left: 30px; }
+.ml-50 { margin-left: 50px; }
+.mr-5 { margin-right: 5px; }
+.mr-10 { margin-right: 10px; }
+.mr-15 { margin-right: 15px; }
+.mr-20 { margin-right: 20px; }
+.mr-30 { margin-right: 30px; }
+.mr-50 { margin-right: 50px; }
+
+/*
 Animations / Transitions / Extras
  */
 .hidden { display: none; }
@@ -130,6 +186,9 @@ Animations / Transitions / Extras
 .rounded-full { border-radius: 100%; }
 .shadow { box-shadow: rgba(0,0,0,0.5) 0 1px 3px; }
 .clear { clear: both; }
+.cursor-pointer { cursor: pointer; }
+.border-none { border: none; }
+.list-none { list-style: none; padding: 0; }
 
 /*
 Responsive

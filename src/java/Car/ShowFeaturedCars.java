@@ -16,9 +16,9 @@ import javax.inject.Named;
 
 import Database.DatabaseConnection;
 
-@Named("showCarsBean")
+@Named("showFeaturedCarsBean")
 @ViewScoped
-public class ShowCars implements Serializable {
+public class ShowFeaturedCars implements Serializable {
     
     DatabaseConnection conn = new DatabaseConnection();
 
@@ -34,6 +34,7 @@ public class ShowCars implements Serializable {
             while (result.next()) {
                 if(i < 9) {
                     last9.add(new CarConstructor(
+                            result.getInt("id"),
                             result.getString("brand"),
                             result.getString("modelname"),
                             result.getString("photo"),

@@ -8,8 +8,10 @@ public class CarConstructor {
     private Double cc;
     private String photo;
     private Integer seats;
+    private Integer id;
 
-    public CarConstructor(String brandName, String modelName, String photo, Double price, Double cc, Integer seats) {
+    public CarConstructor(Integer id, String brandName, String modelName, String photo, Double price, Double cc, Integer seats) {
+        this.id = id;
         this.brandName = brandName;
         this.modelName = modelName;
         this.photo = photo;
@@ -53,6 +55,12 @@ public class CarConstructor {
     }
     public void setSeats(Integer seats) {
         this.seats = seats;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
     }
 
 }

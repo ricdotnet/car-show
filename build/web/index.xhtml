@@ -31,68 +31,70 @@
 
         <div class="container-90">
 
-            <div style="margin-top: 20px; margin-bottom: 20px;" class="announce">
+            <div style="margin-top: 20px; margin-bottom: 20px;" class="announce w-full">
                 Featured Cars
             </div>
 
             <!-- cars loop start -->
-            <ui:repeat var="car" value="#{showCarsBean.printLast9()}">
-                <div class="card rounded-sm">
+            <div class="grid">
+                <ui:repeat var="car" value="#{showFeaturedCarsBean.printLast9()}">
+                    <div class="card rounded-sm">
 
-                    <div>
-                        <img class="image rounded-sm" src="#{car.photo}" alt="Car Photo"/>
-                    </div>
+                        <div>
+                            <img class="image rounded-sm" src="#{car.photo}" alt="Car Photo"/>
+                        </div>
 
-                    <div>
-                        <span class="uppercase gray">
-                            Brand:
-                        </span>
-                        <span>
-                            <h:outputText value="#{car.brandName}" />
-                        </span>
-                    </div>
-                    <div>
-                        <span class="uppercase gray">
-                            Model:
-                        </span>
-                        <span>
-                            <h:outputText value="#{car.modelName}" />
-                        </span>
-                    </div>
-                    <div>
-                        <span class="uppercase gray">
-                            Price in £:
-                        </span>
-                        <span>
-                            <h:outputText value="#{car.price}" />
-                        </span>
-                    </div>
-                    <div>
-                        <span class="uppercase gray">
-                            Engine size in cc:
-                        </span>
-                        <span>
-                            <h:outputText value="#{car.cc}" />
-                        </span>
-                    </div>
-                    <div>
-                        <span class="uppercase gray">
-                            Seats:
-                        </span>
-                        <span>
-                            <h:outputText value="#{car.seats}" />
-                        </span>
-                    </div>
+                        <div>
+                            <span class="uppercase gray">
+                                Brand:
+                            </span>
+                            <span>
+                                <h:outputText value="#{car.brandName}" />
+                            </span>
+                        </div>
+                        <div>
+                            <span class="uppercase gray">
+                                Model:
+                            </span>
+                            <span>
+                                <h:outputText value="#{car.modelName}" />
+                            </span>
+                        </div>
+                        <div>
+                            <span class="uppercase gray">
+                                Price in £:
+                            </span>
+                            <span>
+                                <h:outputText value="#{car.price}" />
+                            </span>
+                        </div>
+                        <div>
+                            <span class="uppercase gray">
+                                Engine size in cc:
+                            </span>
+                            <span>
+                                <h:outputText value="#{car.cc}" />
+                            </span>
+                        </div>
+                        <div>
+                            <span class="uppercase gray">
+                                Seats:
+                            </span>
+                            <span>
+                                <h:outputText value="#{car.seats}" />
+                            </span>
+                        </div>
 
-                </div>
-            </ui:repeat>
+                    </div>
+                </ui:repeat>
+            </div>
             <!-- cars loop end -->
 
         </div>
 
 
         <!-- footer .. to repeat in all files -->
-        <div id="footer" class="clear">
+        <div id="footer" class="mt-30">
             <div class="container-70">
                 the footer will go here thanks
             </div>

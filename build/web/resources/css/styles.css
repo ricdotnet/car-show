@@ -98,20 +98,56 @@ Main containers and cards here
     width: 70%;
     margin: 0 auto;
 }
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+}
 .card {
-    width: 30%;
     padding: 10px;
     background-color: #ECF0F1;
     border: 1px solid #7F8C8D;
-    margin: 5px;
     text-align: center;
     height: auto;
-    float: left;
     }
     .card .image {
         width: 100%;
         object-fit: contain;
     }
+#modal-bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+}
+#modal {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(0) translateX(-50%);
+    background-color: white;
+}
+
+/*
+Table styling
+ */
+.table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.table-header {
+    background-color: #859596;
+}
+.table-row-even {
+    background-color: #E0E0E0;
+}
+.table-row-odd {
+    background-color: #D0D0D0;
+}
 
 /*
 Buttons
@@ -137,14 +173,16 @@ Text styling
 .text-shadow { text-shadow: rgba(0,0,0,0.5) 0 1px 3px; }
 .uppercase { text-transform: uppercase; }
 .title { font-size: 30px; }
-.sub-title { font-size: 24px; }
+.sub-title { font-size: 20px; }
 .announce { font-size: 36px; }
 .gray { color: #999; }
 .text-center { text-align: center; }
+.text-white { color: white; }
 
 /*
 Margins and paddings
  */
+.w-full { width: 100%; }
 .m-5 { margin: 5px; }
 .m-10 { margin: 10px; }
 .m-15 { margin: 15px; }
@@ -175,6 +213,16 @@ Margins and paddings
 .mr-20 { margin-right: 20px; }
 .mr-30 { margin-right: 30px; }
 .mr-50 { margin-right: 50px; }
+.p-5 { padding: 5px; }
+.p-10 { padding: 10px; }
+.pt-5 { padding-top: 5px; }
+.pt-10 { padding-top: 10px; }
+.pb-5 { padding-bottom: 5px; }
+.pb-10 { padding-bottom: 10px; }
+.pr-5 { padding-right: 5px; }
+.pr-10 { padding-right: 10px; }
+.pl-5 { padding-left: 5px; }
+.pl-10 { padding-left: 10px; }
 
 /*
 Animations / Transitions / Extras
@@ -194,12 +242,12 @@ Animations / Transitions / Extras
 Responsive
  */
 @media only screen and (max-width: 735px) {
-    .card {
-        width: 95%;
+    .grid {
+        grid-template-columns: auto;
     }
 }
 @media only screen and (min-width: 736px) and (max-width: 1070px) {
-    .card {
-        width: 45%;
+    .grid {
+        grid-template-columns: auto auto;
     }
 }

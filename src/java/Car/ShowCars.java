@@ -22,12 +22,6 @@ public class ShowCars implements Serializable {
     
     DatabaseConnection conn = new DatabaseConnection();
 
-    private String brandName;
-    private String modelName;
-    private Double price;
-    private Double cc;
-    private String photo;
-
     private List<CarConstructor> last9; //featured in the home page
 
     public void getLast9() {

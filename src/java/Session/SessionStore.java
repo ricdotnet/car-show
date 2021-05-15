@@ -6,6 +6,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.Serializable;
 import java.sql.PreparedStatement;
@@ -18,10 +19,12 @@ public class SessionStore implements Serializable {
 
     DatabaseConnection conn = new DatabaseConnection();
 
-    private static Boolean isAdmin = false;
-
-
-
+    public static HttpSession session() {
+        return (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
+    }
+    public static Boolean isAdmin() {
+        return (Boolean) session().getAttribute("isAdmin");
+    }
 
 
 
@@ -31,15 +34,9 @@ public class SessionStore implements Serializable {
      * This file stores an admin state when the user successful logs in.
      * It is a basic store. Because I use static variables then the state stays until the user leaves or logs out.
      */
-    public static Boolean getAdminState() {
-        return isAdmin;
-    }
-    public static void setAdminState(Boolean state) {
-        isAdmin = state;
-    }
     public void checkAdmin() {
         try {
-            if (!isAdmin) {
+            if (isAdmin() == null) {
                 System.out.println("Unauthorized personnel tried to access the admin page.");
                 FacesContext.getCurrentInstance().getExternalContext().redirect("admin-login.xhtml");
             }
@@ -49,7 +46,7 @@ public class SessionStore implements Serializable {
     }
     public void preventDoubleLogin() {
         try {
-            if(isAdmin) {
+            if(isAdmin() != null) {
                 FacesContext.getCurrentInstance().getExternalContext().redirect("admin.xhtml");
             }
         } catch (IOException e) {
@@ -75,7 +72,8 @@ public class SessionStore implements Serializable {
 
             ResultSet results = login.getResultSet();
             if(results.next()) {
-                setAdminState(true);
+//                setAdminState(true);
+                session().setAttribute("isAdmin", true);
 
                 username = "";
                 password = "";
@@ -90,7 +88,7 @@ public class SessionStore implements Serializable {
         }
     }
     public void doLogout() throws IOException {
-        setAdminState(false);
+        session().invalidate();
         FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
     }
     String username;

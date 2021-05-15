@@ -25,7 +25,7 @@
                     </ul>
                 <!-- menu with submenu end -->
                 <a class="link rounded-sm shadow text-shadow" href="admin.xhtml">Admin Panel</a>
-                <c:if test="#{sessionBean.getAdminState()}">
+                <c:if test="#{sessionBean.isAdmin()}">
                     <a class="rounded-sm text-shadow" style="margin-left: 50px;" href="logout.xhtml">Logout</a>
                 </c:if>
             </div>

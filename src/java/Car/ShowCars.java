@@ -27,7 +27,7 @@ public class ShowCars implements Serializable {
     public void getLast9() {
         last9 = new ArrayList<>();
         try {
-            PreparedStatement getCars = conn.doConnect().prepareStatement("select * from cars.models");
+            PreparedStatement getCars = conn.doConnect().prepareStatement("select * from cars.models order by id desc");
             getCars.execute();
             ResultSet result = getCars.getResultSet();
             int i = 0; //this is to stop at 9 loops

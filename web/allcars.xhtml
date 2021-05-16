@@ -5,13 +5,11 @@
       xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Add New Brand</title>
+        <title>All Cars</title>
         <h:outputStylesheet name="styles.css" library="css" />
     </h:head>
     <h:body>
-
-        #{sessionBean.checkAdmin()}
-
+        
         <!-- navbar .. to repeat in all files -->
         <div id="nav">
             <div class="container">
@@ -30,29 +28,8 @@
             </div>
         </div>
         <!-- navbar .. to repeat in all files -->
-        <div class="container-90">
-
-            <div class="form-box rounded-sm mt-30">
-                <h:form id="form">
-                    <h:outputLabel value="Brand Name" for="brand">
-                        <h:inputText styleClass="input mb-20" id="brand" value="#{addBrandBean.brandName}" />
-                    </h:outputLabel>
-
-                    <h:outputLabel value="Country" for="country">
-                        <h:inputText styleClass="input mb-20" id="country" value="#{addBrandBean.country}" />
-                    </h:outputLabel>
-
-                    <h:outputLabel value="Logo" for="logo">
-                        <h:inputText styleClass="input mb-20" id="logo" value="#{addBrandBean.logo}" />
-                    </h:outputLabel>
-
-                    <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Add Brand" action="#{addBrandBean.addBrand()}" />
-
-                    <h:messages styleClass="list-none error-box" id="errorMessage" />
-                </h:form>
-            </div>
-
-        </div>
+        
+        
         <!-- footer .. to repeat in all files -->
         <div id="footer" class="mt-30">
             <div class="container-70">
@@ -63,7 +40,7 @@
 
         <!-- javascript files -->
         <h:outputScript name="navbar.js" library="js" />
-
+        
     </h:body>
 </html>
 

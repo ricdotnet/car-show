@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:c="http://java.sun.com/jsp/jstl/core"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>All Cars</title>
         <h:outputStylesheet name="styles.css" library="css" />
@@ -29,7 +30,46 @@
         </div>
         <!-- navbar .. to repeat in all files -->
         
-        
+        <div class="container-90">
+
+            <div style="margin-top: 20px; margin-bottom: 20px;" class="announce w-full">
+                All Cars
+            </div>
+       
+            <h:dataTable id="allCarsTable" var="car" value="#{showAllCarsBean.printAllCars()}"
+                styleClass="text-center table"
+                headerClass="table-header sub-title p-10 text-white text-shadow"
+                rowClasses="table-row-even, table-row-odd">
+                
+                <h:column>
+                    <f:facet name="header">Photo</f:facet>
+                    <img src="#{car.photo}" alt="#{car.brandName} #{car.modelName}" width="120px" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Brand</f:facet>
+                    #{car.brandName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Model</f:facet>
+                    #{car.modelName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Price in £</f:facet>
+                    #{car.price}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Engine Size</f:facet>
+                    #{car.cc} cc
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Seats</f:facet>
+                    #{car.seats}
+                </h:column>
+                                
+            </h:dataTable>
+            
+        </div>
+               
         <!-- footer .. to repeat in all files -->
         <div id="footer" class="mt-30">
             <div class="container-70">

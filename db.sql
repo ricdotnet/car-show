@@ -26,87 +26,48 @@ create table cars.sellers (
                               primary key(id)
 );
 
--- insert 10 cars
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Polo',
-                                                                              'Volkswagen',
-                                                                              'https://image.shutterstock.com/image-photo/prague-czech-republic-20-1-600w-1313309792.jpg',
-                                                                              12500,
-                                                                              1.2,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Golf',
-                                                                              'Volkswagen',
-                                                                              'https://image.shutterstock.com/image-photo/riga-lv-jun-10-2020-600w-1753534913.jpg',
-                                                                              17500,
-                                                                              2.0,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'A4',
-                                                                              'Audi',
-                                                                              'https://image.shutterstock.com/image-photo/frankfurt-germany-sep-10-2019-600w-1527523121.jpg',
-                                                                              28500,
-                                                                              2.4,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'A3',
-                                                                              'Audi',
-                                                                              'https://image.shutterstock.com/image-photo/2nd-may-2018-audi-a3-260nw-1117058711.jpg',
-                                                                              20500,
-                                                                              1.6,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Clio',
-                                                                              'Renault',
-                                                                              'https://image.shutterstock.com/image-photo/warsaw-poland-11212019-new-renault-260nw-1567905157.jpg',
-                                                                              14500,
-                                                                              1.6,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Megane',
-                                                                              'Renault',
-                                                                              'https://image.shutterstock.com/image-photo/montmelo-spainseptember-29-2019-20062010-600w-1547407967.jpg',
-                                                                              18800,
-                                                                              1.6,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Scenic',
-                                                                              'Renault',
-                                                                              'https://image.shutterstock.com/image-photo/geneva-switzerland-march-05-2019-600w-1343503553.jpg',
-                                                                              17000,
-                                                                              1.9,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Astra',
-                                                                              'Vauxhall',
-                                                                              'https://image.shutterstock.com/image-photo/brussels-belgium-jan-09-2020-260nw-1667782387.jpg',
-                                                                              18800,
-                                                                              1.6,
-                                                                              5
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'MX-5',
-                                                                              'Mazda',
-                                                                              'https://image.shutterstock.com/image-photo/brussels-belgium-jan-09-2020-600w-1619987485.jpg',
-                                                                              16800,
-                                                                              1.3,
-                                                                              2
-                                                                          );
-insert into cars.models (modelname, brand, photo, price, cc, seats) values(
-                                                                              'Supra',
-                                                                              'Toyota',
-                                                                              'https://image.shutterstock.com/image-photo/brussels-belgium-jan-09-2020-600w-1639268338.jpg',
-                                                                              21250,
-                                                                              1.7,
-                                                                              4
-                                                                          );
+-- insert 3 brands
+insert into cars.brands(brandname, country, logo) values (
+    'Mercedes',
+    'Germany',
+    'https://image.shutterstock.com/image-photo/valencia-spain-march-27-2017-600w-617716007.jpg'
+);
+insert into cars.brands(brandname, country, logo) values (
+    'BMW',
+    'Germany',
+    'https://image.shutterstock.com/image-photo/kiev-ukraine-march-21-2015-600w-269735093.jpg'
+);
+insert into cars.brands(brandname, country, logo) values (
+    'Volkswagen',
+    'Germany',
+    'https://image.shutterstock.com/image-photo/kiev-ukraine-march-21-2015-600w-269735078.jpg'
+);
+
+-- insert 3 cars
+insert into cars.models (modelname, brand, photo, price, cc, seats) values (
+    'M3',
+    'BMW',
+    'https://image.shutterstock.com/image-photo/la-california-february-26-2018-600w-1035959809.jpg',
+    36500,
+    3,
+    4
+);
+insert into cars.models (modelname, brand, photo, price, cc, seats) values (
+    'Golf',
+    'Volkswagen',
+    'https://image.shutterstock.com/image-photo/riga-lv-jun-10-2020-600w-1753534913.jpg',
+    17500,
+    2.0,
+    5
+);
+insert into cars.models (modelname, brand, photo, price, cc, seats) values (
+    'c63 AMG',
+    'Mercedes',
+    'https://image.shutterstock.com/image-photo/oradearomania-mercedesbenz-c63-s-coupe-600w-1404613571.jpg',
+    41500,
+    4.0,
+    4
+);
 
 -- insert 1 admin
 insert into cars.sellers (username, password, email, photo) values (

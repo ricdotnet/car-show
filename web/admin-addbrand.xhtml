@@ -10,7 +10,7 @@
     </h:head>
     <h:body>
 
-        #{sessionBean.isAdmin()}
+        #{sessionBean.checkAdmin()}
 
         <!-- navbar .. to repeat in all files -->
         <div id="nav">
@@ -24,7 +24,7 @@
                     </ul>
                 <!-- menu with submenu end -->
                 <a class="link rounded-sm shadow text-shadow" href="admin.xhtml">Admin Panel</a>
-                <c:if test="#{sessionBean.checkAdmin()}">
+                <c:if test="#{sessionBean.isAdmin()}">
                     <a class="rounded-sm text-shadow" style="margin-left: 50px;" href="logout.xhtml">Logout</a>
                 </c:if>
             </div>
@@ -32,33 +32,21 @@
         <!-- navbar .. to repeat in all files -->
         <div class="container-90">
 
-            <div class="form-box rounded-sm">
+            <div class="form-box rounded-sm mt-30">
                 <h:form id="form">
-                    <h:outputLabel value="Brand" for="brand">
-                        <h:inputText styleClass="input mb-20" id="brand" value="#{addCarBean.brandName}" />
+                    <h:outputLabel value="Brand Name" for="brand">
+                        <h:inputText styleClass="input mb-20" id="brand" value="#{addBrandBean.brandName}" />
                     </h:outputLabel>
 
-                    <h:outputLabel value="Model" for="model">
-                        <h:inputText styleClass="input mb-20" id="model" value="#{addCarBean.modelName}" />
+                    <h:outputLabel value="Country" for="country">
+                        <h:inputText styleClass="input mb-20" id="country" value="#{addBrandBean.country}" />
                     </h:outputLabel>
 
-                    <h:outputLabel value="Price" for="price">
-                        <h:inputText styleClass="input mb-20" id="price" value="#{addCarBean.price}" />
+                    <h:outputLabel value="Logo" for="logo">
+                        <h:inputText styleClass="input mb-20" id="logo" value="#{addBrandBean.logo}" />
                     </h:outputLabel>
 
-                    <h:outputLabel value="Engine Size" for="engine">
-                        <h:inputText styleClass="input mb-20" id="engine" value="#{addCarBean.cc}" />
-                    </h:outputLabel>
-
-                    <h:outputLabel value="Seats" for="seats">
-                        <h:inputText styleClass="input mb-20" id="seats" value="#{addCarBean.seats}" />
-                    </h:outputLabel>
-
-                    <h:outputLabel value="Photo" for="photo">
-                        <h:inputText styleClass="input mb-20" id="photo" value="#{addCarBean.photo}" />
-                    </h:outputLabel>
-
-                    <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Add Car" action="#{addCarBean.addCar()}" />
+                    <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Add Car" action="#{addBrandBean.addBrand()}" />
 
                     <h:messages styleClass="list-none error-box" id="errorMessage" />
                 </h:form>

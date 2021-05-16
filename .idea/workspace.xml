@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="853ce37a-2de1-4057-9074-022ab2e10645" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Session/SessionStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Session/SessionStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/admin-addbrand.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin-addbrand.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/admin-addcar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin-addcar.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/admin-editcar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin-editcar.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/admin-login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin-login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Session/SessionStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Session/SessionStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin-addbrand.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin-addbrand.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin-addcar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin-addcar.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin-editcar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin-editcar.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin-login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin-login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +78,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -120,7 +110,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621022417889</updated>
-      <workItem from="1621022420155" duration="38686000" />
+      <workItem from="1621022420155" duration="39283000" />
+      <workItem from="1621172224357" duration="212000" />
+      <workItem from="1621172487002" duration="204000" />
+      <workItem from="1621172720074" duration="62000" />
+      <workItem from="1621172813328" duration="148000" />
     </task>
     <servers />
   </component>
@@ -137,5 +131,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

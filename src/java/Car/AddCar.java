@@ -52,6 +52,8 @@ public class AddCar implements Serializable {
         } catch (SQLException e) {
             System.out.println(e.toString());
         }
+        
+        FacesContext.getCurrentInstance().addMessage("Success", new FacesMessage("Car added with success."));
     }
 
     /**

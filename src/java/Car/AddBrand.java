@@ -28,7 +28,8 @@ public class AddBrand implements Serializable {
             return;
         }
 
-        if(!checkBrand(brandName)) {
+        if(checkBrand(brandName)) {
+            FacesContext.getCurrentInstance().addMessage("Error", new FacesMessage("That brand already exists in our system."));
             return;
         }
 
@@ -43,6 +44,8 @@ public class AddBrand implements Serializable {
         } catch(SQLException e) {
             System.out.println(e.toString());
         }
+        
+        FacesContext.getCurrentInstance().addMessage("Success", new FacesMessage("Brand added to the system."));
     }
 
     /**
@@ -62,7 +65,6 @@ public class AddBrand implements Serializable {
             System.out.println(e.toString());
         }
 
-        FacesContext.getCurrentInstance().addMessage("Error", new FacesMessage("That brand already exists in our system."));
         return false;
     }
 

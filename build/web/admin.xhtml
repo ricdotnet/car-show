@@ -38,6 +38,7 @@
                 <a class="btn-primary shadow rounded-sm" href="admin-addbrand.xhtml" target="_blank">Add Brand</a>
             </div>
 
+            <h:messages />
 
             <h:dataTable id="allCarsTable" var="car" value="#{showAllCarsBean.printAllCars()}"
                 styleClass="text-center table"
@@ -75,6 +76,37 @@
                         </h:commandButton>
                     </h:form>
                 </h:column>
+            </h:dataTable>
+            
+            <br/><br/>
+            
+            <h:dataTable id="allBrandsTable" var="brand" value="#{showAllBrandsBean.printBrands()}"
+                styleClass="text-center table"
+                headerClass="table-header sub-title p-10 text-white text-shadow"
+                rowClasses="table-row-even, table-row-odd">
+                
+                <h:column>
+                    <f:facet name="header">Logo</f:facet>
+                    <img src="#{brand.logo}" alt="#{brand.brandName}" width="120px"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header">Brand Name</f:facet>
+                    #{brand.brandName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Country</f:facet>
+                    #{brand.country}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Options</f:facet>
+                    <h:form>
+                        <h:commandButton value="delete">
+                            <f:ajax listener="#{showAllBrandsBean.removeBrand(brand.id)}" />
+                        </h:commandButton>
+                    </h:form>
+                </h:column>
+                
             </h:dataTable>
 
         </div>

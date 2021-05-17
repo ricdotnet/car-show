@@ -6,7 +6,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>All Cars</title>
+        <title>All Brands</title>
         <h:outputStylesheet name="styles.css" library="css" />
     </h:head>
     <h:body>
@@ -33,48 +33,35 @@
         <div class="container-90">
 
             <div style="margin-top: 20px; margin-bottom: 20px;" class="announce w-full">
-                All Cars
+                All Brands
             </div>
        
-            <h:dataTable id="allCarsTable" var="car" value="#{showAllCarsBean.printAllCars()}"
+            <h:dataTable id="allCarsTable" var="brand" value="#{showAllBrandsBean.printBrands()}"
                 styleClass="text-center table"
                 headerClass="table-header sub-title p-10 text-white text-shadow"
                 rowClasses="table-row-even, table-row-odd">
                 
                 <h:column>
-                    <f:facet name="header">Photo</f:facet>
-                    <img src="#{car.photo}" alt="#{car.brandName} #{car.modelName}" width="120px" onclick="showImageModal('#{car.photo}', '#{car.brandName}', '#{car.modelName}')" class="cursor-pointer" />
+                    <f:facet name="header">Logo</f:facet>
+                    <img src="#{brand.logo}" alt="#{brand.brandName}" width="120px" />
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Brand</f:facet>
-                    #{car.brandName}
+                    <f:facet name="header">Brand Name</f:facet>
+                    #{brand.brandName}
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Model</f:facet>
-                    #{car.modelName}
+                    <f:facet name="header">Country</f:facet>
+                    #{brand.country}
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Price in £</f:facet>
-                    #{car.price}
-                </h:column>
-                <h:column class="engine" headerClass="engine table-header sub-title p-10 text-white text-shadow">
-                    <f:facet name="header">Engine Size</f:facet>
-                    #{car.cc} cc
-                </h:column>
-                <h:column class="seats" headerClass="seats table-header sub-title p-10 text-white text-shadow">
-                    <f:facet name="header">Seats</f:facet>
-                    #{car.seats}
+                    <f:facet name="header">Stock</f:facet>
+                    #{brand.stock}
                 </h:column>
                                 
             </h:dataTable>
+            
         </div>
-
-        <!-- modal for big image -->
-        <div id="image-modal" class="image-modal hidden">
-            <!-- leave empty here -->
-        </div>
-        <!-- modal for big image -->
-               
+        
         <!-- footer .. to repeat in all files -->
         <div id="footer" class="mt-30">
             <div class="container-70">
@@ -85,7 +72,6 @@
 
         <!-- javascript files -->
         <h:outputScript name="navbar.js" library="js" />
-        <h:outputScript name="extras.js" library="js" />
         
     </h:body>
 </html>

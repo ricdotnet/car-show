@@ -5,7 +5,7 @@
       xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>Edit Car</title>
+        <title>Add New Brand</title>
         <h:outputStylesheet name="styles.css" library="css" />
     </h:head>
     <h:body>
@@ -33,40 +33,26 @@
         <div class="container-90">
 
             <div style="margin-top: 20px;" class="announce w-full">
-                Editing Car.
+                Add a new brand.
             </div>
 
             <div class="form-box rounded-sm mt-30">
                 <h:form id="form">
-                    <h:panelGroup>
-                        <h:outputLabel value="Brand" for="brand">
-                            <h:inputText styleClass="input mb-20" id="brand" value="#{showAllCarsBean.selectedCar.brandName}" />
-                        </h:outputLabel>
+                    <h:outputLabel value="Brand Name" for="brand">
+                        <h:inputText styleClass="input mb-20" id="brand" value="#{addBrandBean.brandName}" />
+                    </h:outputLabel>
 
-                        <h:outputLabel value="Model" for="model">
-                            <h:inputText styleClass="input mb-20" id="model" value="#{showAllCarsBean.selectedCar.modelName}" />
-                        </h:outputLabel>
+                    <h:outputLabel value="Country" for="country">
+                        <h:inputText styleClass="input mb-20" id="country" value="#{addBrandBean.country}" />
+                    </h:outputLabel>
 
-                        <h:outputLabel value="Price" for="price">
-                            <h:inputText styleClass="input mb-20" id="price" value="#{showAllCarsBean.selectedCar.price}" />
-                        </h:outputLabel>
+                    <h:outputLabel value="Logo" for="logo">
+                        <h:inputText styleClass="input mb-20" id="logo" value="#{addBrandBean.logo}" />
+                    </h:outputLabel>
 
-                        <h:outputLabel value="Engine Size" for="engine">
-                            <h:inputText styleClass="input mb-20" id="engine" value="#{showAllCarsBean.selectedCar.cc}" />
-                        </h:outputLabel>
+                    <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Add Brand" action="#{addBrandBean.addBrand()}" />
 
-                        <h:outputLabel value="Seats" for="seats">
-                            <h:inputText styleClass="input mb-20" id="seats" value="#{showAllCarsBean.selectedCar.seats}" />
-                        </h:outputLabel>
-
-                        <h:outputLabel value="Photo" for="photo">
-                            <h:inputText styleClass="input mb-20" id="photo" value="#{showAllCarsBean.selectedCar.photo}" />
-                        </h:outputLabel>
-
-                        <h:commandButton styleClass="btn-primary rounded-sm border-none cursor-pointer shadow" value="Save" action="#{showAllCarsBean.saveCar()}" />
-
-                        <h:messages styleClass="list-none error-box" id="errorMessage" />
-                    </h:panelGroup>
+                    <h:messages styleClass="list-none error-box" id="errorMessage" />
                 </h:form>
             </div>
 

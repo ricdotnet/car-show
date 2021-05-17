@@ -6,12 +6,14 @@ public class BrandConstructor {
     private String country;
     private String logo;
     private Integer id;
+    private Integer stock;
     
-    public BrandConstructor(Integer id, String brandName, String country, String logo) {
+    public BrandConstructor(Integer id, String brandName, String country, String logo, Integer stock) {
         this.id = id;
         this.brandName = brandName;
         this.country = country;
         this.logo = logo;
+        this.stock = stock;
     }
     
     /**
@@ -40,6 +42,12 @@ public class BrandConstructor {
     }
     public void setLogo(String logo) {
         this.logo = logo;
+    }
+    public Integer getStock() {
+        return stock;
+    }
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
     
 }

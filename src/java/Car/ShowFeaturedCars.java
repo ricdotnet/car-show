@@ -1,5 +1,8 @@
 package Car;
 
+import Database.DatabaseConnection;
+import Car.CarConstructor;
+
 import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
-
-import Database.DatabaseConnection;
 
 @Named("showFeaturedCarsBean")
 @ViewScoped

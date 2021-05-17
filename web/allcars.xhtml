@@ -43,7 +43,7 @@
                 
                 <h:column>
                     <f:facet name="header">Photo</f:facet>
-                    <img src="#{car.photo}" alt="#{car.brandName} #{car.modelName}" width="120px" />
+                    <img src="#{car.photo}" alt="#{car.brandName} #{car.modelName}" width="120px" onclick="showImageModal('#{car.photo}', '#{car.brandName}', '#{car.modelName}')" class="cursor-pointer" />
                 </h:column>
                 <h:column>
                     <f:facet name="header">Brand</f:facet>
@@ -67,8 +67,13 @@
                 </h:column>
                                 
             </h:dataTable>
-            
         </div>
+
+        <!-- modal for big image -->
+        <div id="image-modal" class="image-modal hidden">
+                <!-- leave empty here -->
+        </div>
+        <!-- modal for big image -->
                
         <!-- footer .. to repeat in all files -->
         <div id="footer" class="mt-30">
@@ -80,6 +85,7 @@
 
         <!-- javascript files -->
         <h:outputScript name="navbar.js" library="js" />
+        <h:outputScript name="extras.js" library="js" />
         
     </h:body>
 </html>

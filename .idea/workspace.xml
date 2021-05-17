@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="853ce37a-2de1-4057-9074-022ab2e10645" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/resources/js/extras.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/BrandConstructor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/BrandConstructor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/ShowAllBrands.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/ShowAllBrands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/ShowAllCars.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/ShowAllCars.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/ShowFeaturedCars.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Car/ShowFeaturedCars.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/admin.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/allbrands.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/allbrands.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/allcars.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/allcars.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/resources/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/resources/js/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Car/BrandConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Car/BrandConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Car/ShowAllBrands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Car/ShowAllBrands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Car/ShowAllCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Car/ShowAllCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/Car/ShowFeaturedCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Car/ShowFeaturedCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/allbrands.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/allbrands.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/allcars.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/allcars.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/modal.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +84,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -90,13 +114,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,6 +141,9 @@
       <workItem from="1621172487002" duration="204000" />
       <workItem from="1621172720074" duration="62000" />
       <workItem from="1621172813328" duration="148000" />
+      <workItem from="1621205431092" duration="1716000" />
+      <workItem from="1621207224370" duration="50000" />
+      <workItem from="1621207479835" duration="3906000" />
     </task>
     <servers />
   </component>

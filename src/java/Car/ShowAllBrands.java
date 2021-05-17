@@ -1,13 +1,14 @@
 package Car;
 
 import Database.DatabaseConnection;
+import Car.BrandConstructor;
+
 import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
@@ -33,7 +34,8 @@ public class ShowAllBrands implements Serializable {
                         result.getInt("id"),
                         result.getString("brandname"),
                         result.getString("country"),
-                        result.getString("logo")
+                        result.getString("logo"),
+                        getStock(result.getString("brandname"))
                 ));
             }
             
@@ -61,5 +63,29 @@ public class ShowAllBrands implements Serializable {
             System.out.println(e.toString());
         }
     }
-    
+
+    /**
+     * Get stock from brand.
+     */
+    public Integer getStock(String brandName) {
+        Integer stockCount = 0;
+        try {
+            PreparedStatement getStock = conn.doConnect().prepareStatement("select * from cars.models where brand = ?");
+            getStock.setString(1, brandName);
+            getStock.execute();
+
+            ResultSet result = getStock.getResultSet();
+
+            while (result.next()) {
+                stockCount++;
+            }
+
+            return stockCount;
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+        }
+
+        return 0;
+    }
+
 }
